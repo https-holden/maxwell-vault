@@ -1,0 +1,39 @@
+filters:
+  and:
+    - note.categories.contains(link("Artist's Way"))
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Note
+  note.theme:
+    displayName: Theme
+  note.week:
+    displayName: Week
+views:
+  - type: table
+    name: Weeks
+    filters:
+      and:
+        - file.name.startsWith("Week ")
+    order:
+      - file.name
+      - week
+      - theme
+      - start
+      - end
+    sort:
+      - property: week
+        direction: ASC
+  - type: table
+    name: Artist dates
+    filters:
+      and:
+        - list(type).contains("artist-date")
+    order:
+      - file.name
+      - week
+      - date
+      - place
+    sort:
+      - property: date
+        direction: DESC

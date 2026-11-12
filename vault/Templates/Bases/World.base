@@ -1,0 +1,109 @@
+filters:
+  and:
+    - note.categories.contains(link("World"))
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Name
+  note.type:
+    displayName: Type
+  note.region:
+    displayName: Region
+  note.era:
+    displayName: Era
+  note.year:
+    displayName: Year
+  note.status:
+    displayName: Status
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - type
+      - region
+      - status
+    sort:
+      - property: type
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Places
+    filters:
+      and:
+        - list(type).contains("Place")
+    order:
+      - file.name
+      - region
+      - status
+  - type: table
+    name: Peoples and creatures
+    filters:
+      or:
+        - list(type).contains("People")
+        - list(type).contains("Creature")
+    order:
+      - file.name
+      - type
+      - region
+      - status
+  - type: table
+    name: Factions
+    filters:
+      and:
+        - list(type).contains("Faction")
+    order:
+      - file.name
+      - region
+      - status
+  - type: table
+    name: History
+    filters:
+      and:
+        - list(type).contains("Event")
+    order:
+      - year
+      - era
+      - file.name
+      - status
+    sort:
+      - property: year
+        direction: ASC
+  - type: table
+    name: Magic and lore
+    filters:
+      or:
+        - list(type).contains("Magic")
+        - list(type).contains("Religion")
+        - list(type).contains("Language")
+        - list(type).contains("Lore")
+    order:
+      - file.name
+      - type
+      - status
+  - type: table
+    name: Things
+    filters:
+      and:
+        - list(type).contains("Item")
+    order:
+      - file.name
+      - status
+  - type: table
+    name: Not canon yet
+    filters:
+      and:
+        - status != "canon"
+    order:
+      - file.name
+      - type
+      - status
+  - type: table
+    name: Linked here
+    filters:
+      and:
+        - file.hasLink(this.file)
+    order:
+      - file.name
+      - type

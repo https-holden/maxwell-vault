@@ -1,0 +1,14 @@
+filters:
+  and:
+    - note.type == "known-place"
+properties:
+  file.name:
+    displayName: Place
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - city
+      - country
+      - until

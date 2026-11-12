@@ -1,0 +1,12 @@
+{
+  "attachmentFolderPath": "Attachments",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Notes",
+  "promptDelete": false,
+  "spellcheck": false,
+  "userIgnoreFilters": [
+    "Novel/Sources/",
+    "Inbox/"
+  ]
+}

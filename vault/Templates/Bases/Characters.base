@@ -1,0 +1,69 @@
+filters:
+  and:
+    - note.categories.contains(link("Characters"))
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Character
+  note.tier:
+    displayName: Tier
+  note.race:
+    displayName: Race
+  note.faction:
+    displayName: Faction
+  note.home:
+    displayName: Home
+  note.status:
+    displayName: Status
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - tier
+      - race
+      - faction
+      - home
+      - status
+    sort:
+      - property: tier
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Lead
+    filters:
+      and:
+        - tier == "Lead"
+    order:
+      - file.name
+      - race
+      - faction
+  - type: table
+    name: Important
+    filters:
+      and:
+        - tier == "Important"
+    order:
+      - file.name
+      - race
+      - faction
+  - type: table
+    name: Minor
+    filters:
+      and:
+        - tier == "Minor"
+    order:
+      - file.name
+      - race
+      - faction
+  - type: table
+    name: Linked here
+    filters:
+      and:
+        - file.hasLink(this.file)
+    order:
+      - file.name
+      - tier
+      - race
+      - faction

@@ -1,0 +1,65 @@
+filters:
+  and:
+    - note.type == "morning-pages"
+properties:
+  file.name:
+    displayName: Entry
+  note.date:
+    displayName: Date
+  note.time:
+    displayName: Time
+  note.place:
+    displayName: Place
+views:
+  - type: table
+    name: Recent
+    order:
+      - file.name
+      - date
+      - time
+      - place
+    sort:
+      - property: date
+        direction: DESC
+      - property: time
+        direction: DESC
+    limit: 3
+  - type: table
+    name: All entries
+    order:
+      - file.name
+      - date
+      - time
+      - city
+      - place
+    sort:
+      - property: date
+        direction: DESC
+      - property: time
+        direction: DESC
+  - type: table
+    name: This month
+    filters:
+      and:
+        - date > now() - "31d"
+    order:
+      - file.name
+      - date
+      - time
+      - place
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Last two weeks
+    filters:
+      and:
+        - date > now() - "14d"
+    order:
+      - file.name
+      - date
+      - time
+      - place
+    sort:
+      - property: date
+        direction: DESC

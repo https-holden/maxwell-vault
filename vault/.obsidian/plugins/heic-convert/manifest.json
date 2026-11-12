@@ -1,0 +1,9 @@
+{
+  "id": "heic-convert",
+  "name": "HEIC Convert",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "HEIC/HEIF images pasted, dropped or added to the vault become PNG (or JPEG), scaled down to a sensible size, so they preview everywhere.",
+  "author": "Holden",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,9 @@
+{
+  "id": "home-button",
+  "name": "Home Button",
+  "version": "1.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "Home icon at the top of the ribbon that opens Daily Hub (Cmd/Ctrl-click: new tab), and the \"New morning pages entry\" command behind Cmd+Shift+M.",
+  "author": "Holden",
+  "isDesktopOnly": false
+}

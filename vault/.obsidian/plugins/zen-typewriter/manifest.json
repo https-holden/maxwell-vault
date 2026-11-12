@@ -1,0 +1,9 @@
+{
+  "id": "zen-typewriter",
+  "name": "Zen Typewriter",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Typewriter Mode (line highlight, dimming, typewriter scroll) is off by default and comes alive only while a note is in ProZen full screen.",
+  "author": "Holden",
+  "isDesktopOnly": false
+}

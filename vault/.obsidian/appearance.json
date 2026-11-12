@@ -1,0 +1,9 @@
+{
+  "showRibbon": true,
+  "cssTheme": "Analog",
+  "enabledCssSnippets": [
+    "centered-images",
+    "hub-buttons",
+    "image-captions"
+  ]
+}

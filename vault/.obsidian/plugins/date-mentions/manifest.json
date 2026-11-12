@@ -1,0 +1,9 @@
+{
+  "id": "date-mentions",
+  "name": "Date Mentions",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Type @today, @tomorrow, @friday, @next week or @+3 in the editor and pick the resolved date from a popup, Notion-style.",
+  "author": "Holden",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,69 @@
+{
+  "general": {
+    "version": "1.5.0",
+    "isAnnounceUpdatesEnabled": true,
+    "isPluginActivated": false,
+    "isOnlyActivateAfterFirstInteractionEnabled": false,
+    "enabledPlatforms": "both",
+    "enabledFilePaths": [],
+    "disabledFilePaths": []
+  },
+  "typewriter": {
+    "isTypewriterScrollEnabled": true,
+    "isOnlyMaintainTypewriterOffsetWhenReachedEnabled": false,
+    "isTypewriterOnlyUseCommandsEnabled": false,
+    "typewriterOffset": 0.5
+  },
+  "keepLinesAboveAndBelow": {
+    "isKeepLinesAboveAndBelowEnabled": false,
+    "linesAboveAndBelow": 5
+  },
+  "maxChars": {
+    "isMaxCharsPerLineEnabled": false,
+    "maxCharsPerLine": 64
+  },
+  "dimming": {
+    "isDimUnfocusedEnabled": true,
+    "isDimUnfocusedOnlyInWritingFocusModeEnabled": false,
+    "isDimHighlightListParentEnabled": false,
+    "isDimTableAsOneEnabled": true,
+    "dimUnfocusedMode": "paragraphs",
+    "dimUnfocusedEditorsBehavior": "dim",
+    "dimmedOpacity": 0.25,
+    "isPauseDimUnfocusedWhileScrollingEnabled": true,
+    "isPauseDimUnfocusedWhileSelectingEnabled": true
+  },
+  "currentLine": {
+    "isHighlightCurrentLineEnabled": true,
+    "isHighlightCurrentLineOnlyInWritingFocusModeEnabled": false,
+    "isFadeLinesEnabled": false,
+    "isFadeLinesOnlyInWritingFocusModeEnabled": false,
+    "fadeLinesIntensity": 0.5,
+    "isHighlightCurrentLineOnlyInFocusedEditorEnabled": false,
+    "isPauseCurrentLineHighlightWhileScrollingEnabled": false,
+    "isPauseCurrentLineHighlightWhileSelectingEnabled": false,
+    "currentLineHighlightStyle": "box",
+    "currentLineHighlightUnderlineThickness": 1,
+    "currentLineHighlightColor-dark": "#444444",
+    "currentLineHighlightColor-light": "#dddddd"
+  },
+  "writingFocus": {
+    "doesWritingFocusShowHeader": false,
+    "doesWritingFocusShowVignette": true,
+    "doesWritingFocusShowStatusBar": false,
+    "isWritingFocusFullscreen": true,
+    "writingFocusVignetteStyle": "box",
+    "writingFocusFontSize": 0
+  },
+  "restoreCursorPosition": {
+    "isRestoreCursorPositionEnabled": false,
+    "cursorPositions": {}
+  },
+  "hemingwayMode": {
+    "isHemingwayModeEnabled": false,
+    "isHemingwayModeOnlyInWritingFocusModeEnabled": false,
+    "isAllowBackspaceInHemingwayModeEnabled": false,
+    "isShowHemingwayModeStatusBarEnabled": true,
+    "hemingwayModeStatusBarText": "Hemingway"
+  }
+}

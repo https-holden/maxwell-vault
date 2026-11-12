@@ -1,0 +1,9 @@
+{
+  "id": "word-goal-glow",
+  "name": "Word Goal Glow",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Soft background glow when a note crosses its word goal. Goals per folder or per note (word-goal property). Works in zen mode.",
+  "author": "Holden",
+  "isDesktopOnly": false
+}

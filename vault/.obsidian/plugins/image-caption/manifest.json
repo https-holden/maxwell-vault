@@ -1,0 +1,9 @@
+{
+  "id": "image-caption",
+  "name": "Image Caption",
+  "version": "1.0.0",
+  "minAppVersion": "1.9.0",
+  "description": "Adds an \"Add caption\" button next to Zoom in on images in the editor. The caption is stored as the embed's display text and drawn by the image-captions CSS snippet.",
+  "author": "Holden",
+  "isDesktopOnly": false
+}

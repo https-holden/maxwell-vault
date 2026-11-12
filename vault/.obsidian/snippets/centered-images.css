@@ -1,0 +1,24 @@
+/* All notes: horizontally center images, in reading view and live preview.
+   The embed wrapper is stretched to the full line and centers its image; !important because
+   Obsidian's own embed rules are more specific than a snippet's. Scoped to note content so
+   UI images (sidebars, settings, plugin panes) are untouched. */
+.markdown-rendered .internal-embed.image-embed,
+.markdown-rendered .image-embed,
+.markdown-source-view .internal-embed.image-embed,
+.markdown-source-view .image-embed {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.markdown-rendered img,
+.markdown-source-view .cm-content img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+.markdown-rendered p:has(> .image-embed),
+.markdown-rendered p:has(> img) {
+  text-align: center;
+}

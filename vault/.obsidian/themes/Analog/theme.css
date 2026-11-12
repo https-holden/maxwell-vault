@@ -1,0 +1,260 @@
+/* Analog
+   Parchment-and-serif theme, copied from Holden's vault.
+   Palette "Violet Bone": the editor is a parchment card (#f3ebd5) on a
+   slightly darker ground (#ece1c5), with a violet accent.
+   Type is Apple system serifs (Georgia on Windows). Heading scale follows Notion's serif pages. */
+
+/* ---------- Type and shape: both modes ---------- */
+body {
+  --font-text-theme: "Iowan Old Style", "Charter", Georgia, serif;
+  --font-interface-theme: "Iowan Old Style", "Charter", Georgia, serif;
+
+  --inline-title-font: "Charter", "Iowan Old Style", Georgia, serif;
+  --h1-font: "Charter", "Iowan Old Style", Georgia, serif;
+  --h2-font: "Charter", "Iowan Old Style", Georgia, serif;
+  --h3-font: "Charter", "Iowan Old Style", Georgia, serif;
+  --h4-font: "Charter", "Iowan Old Style", Georgia, serif;
+  --h5-font: "Charter", "Iowan Old Style", Georgia, serif;
+  --h6-font: "Charter", "Iowan Old Style", Georgia, serif;
+
+  /* Notion: 40px bold title over 16px body, then 1.875 / 1.5 / 1.25.
+     Charter only ships Roman and Bold, so 700 is the honest weight. */
+  --inline-title-size: 2.4em;
+  --h1-size: 1.875em;
+  --h2-size: 1.5em;
+  --h3-size: 1.25em;
+  --h4-size: 1.1em;
+  --h5-size: 1em;
+  --h6-size: 0.9em;
+
+  --inline-title-weight: 700;
+  --h1-weight: 700;
+  --h2-weight: 700;
+  --h3-weight: 700;
+  --h4-weight: 700;
+  --h5-weight: 700;
+  --h6-weight: 700;
+
+  --inline-title-line-height: 1.2;
+  --h1-line-height: 1.3;
+  --h2-line-height: 1.3;
+  --h3-line-height: 1.3;
+
+  --inline-title-color: var(--text-normal);
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-muted);
+
+  --heading-spacing: 2em;
+  --font-text-size: 17px;
+  --line-height-normal: 1.6;
+  --file-line-width: 42rem;
+
+  /* Links are ink, not UI: no underline until hover */
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+
+  /* Soft corners everywhere a box is drawn */
+  --radius-s: 6px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --bases-embed-border-radius: var(--radius-m);
+  --bases-table-container-border-radius: var(--radius-m);
+  --bases-cards-radius: var(--radius-m);
+  --callout-radius: var(--radius-m);
+  --code-radius: var(--radius-s);
+
+  /* Quiet chrome */
+  --divider-width: 1px;
+  --tab-outline-width: 1px;
+  --ribbon-width: 44px;
+  --bold-weight: 700;
+
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color: var(--background-modifier-border-focus);
+  --hr-color: var(--background-modifier-border-hover);
+  --table-border-color: var(--background-modifier-border-hover);
+  --table-header-weight: 700;
+  --bases-table-header-color: var(--text-muted);
+}
+
+/* ---------- Light: Violet Bone ---------- */
+body.theme-light {
+  --accent-h: 258;
+  --accent-s: 65%;
+  --accent-l: 44%;                                   /* #5227ba */
+
+  --color-base-00: #f3ebd5;                          /* card */
+  --color-base-05: #f0e7cf;
+  --color-base-10: #ece1c5;                          /* ground */
+  --color-base-20: #ece1c5;
+  --color-base-25: #e2d5b6;
+  --color-base-30: #d6c8a8;
+  --color-base-35: #c4b594;
+  --color-base-40: #ad9d7e;
+  --color-base-50: #8a7a63;
+  --color-base-60: #665647;
+  --color-base-70: #4a3a2a;
+  --color-base-100: #271a0c;                         /* ink (obsidian) */
+
+  --background-primary: #f3ebd5;                     /* editor (card) */
+  --background-primary-alt: #ece1c5;
+  --background-secondary: #ece1c5;                   /* sidebars, tabs (ground) */
+  --background-secondary-alt: #ece1c5;
+
+  --background-modifier-hover: rgba(124, 106, 82, 0.12);        /* umber wash */
+  --background-modifier-active-hover: rgba(82, 39, 186, 0.10);
+  --background-modifier-border: rgba(124, 106, 82, 0.35);       /* hairlines */
+  --background-modifier-border-hover: rgba(124, 106, 82, 0.50);
+  --background-modifier-border-focus: rgba(124, 106, 82, 0.65);
+  --background-modifier-form-field: rgba(255, 250, 235, 0.55);
+
+  --text-normal: #271a0c;
+  --text-muted: #665647;
+  --text-faint: #8a7a63;                             /* still legible on parchment */
+  --text-accent: #5227ba;                            /* links (ultraviolet) */
+  --text-accent-hover: #3b178d;                      /* accent ink */
+  --text-on-accent: #ece1c5;
+  --interactive-accent: #5227ba;
+  --interactive-accent-hover: #3b178d;
+  --interactive-normal: #f3ebd5;
+  --interactive-hover: #ece1c5;
+
+  --text-selection: rgba(82, 39, 186, 0.18);
+  --text-highlight-bg: rgba(214, 166, 66, 0.35);     /* ==highlight== */
+
+  --code-normal: #ad6029;                            /* amber rust */
+  --code-background: rgba(124, 106, 82, 0.12);
+
+  /* Named colours (callouts, tags, graph) */
+  --color-red: #800a13;     --color-red-rgb: 128,10,19;
+  --color-orange: #ad6029;  --color-orange-rgb: 173,96,41;
+  --color-yellow: #b08a2a;  --color-yellow-rgb: 176,138,42;
+  --color-green: #7b754a;   --color-green-rgb: 123,117,74;
+  --color-cyan: #4f7b84;    --color-cyan-rgb: 79,123,132;
+  --color-blue: #4f7b84;    --color-blue-rgb: 79,123,132;
+  --color-purple: #5227ba;  --color-purple-rgb: 82,39,186;
+  --color-pink: #b05873;    --color-pink-rgb: 176,88,115;
+}
+
+/* ---------- Dark: Violet Bone ---------- */
+body.theme-dark {
+  --accent-h: 245;
+  --accent-s: 77%;
+  --accent-l: 78%;                                   /* #a39bf2 */
+
+  --color-base-00: #271a0c;                          /* ground */
+  --color-base-05: #2b1d0f;
+  --color-base-10: #2f2111;
+  --color-base-20: #332414;                          /* card */
+  --color-base-25: #3d2d1b;
+  --color-base-30: #4a3926;
+  --color-base-35: #5a4832;
+  --color-base-40: #6b5940;
+  --color-base-50: #7c6a52;
+  --color-base-60: #9b9176;
+  --color-base-70: #c4b99c;
+  --color-base-100: #ece1c5;
+
+  --background-primary: #271a0c;                     /* editor (ground) */
+  --background-primary-alt: #332414;
+  --background-secondary: #332414;                   /* sidebars (card) */
+  --background-secondary-alt: #332414;
+
+  --background-modifier-hover: rgba(124, 106, 82, 0.22);
+  --background-modifier-active-hover: rgba(163, 155, 242, 0.14);
+  --background-modifier-border: rgba(124, 106, 82, 0.45);
+  --background-modifier-border-hover: rgba(124, 106, 82, 0.60);
+  --background-modifier-border-focus: rgba(124, 106, 82, 0.75);
+  --background-modifier-form-field: rgba(0, 0, 0, 0.18);
+
+  --text-normal: #ece1c5;
+  --text-muted: #9b9176;
+  --text-faint: #7c6a52;
+  --text-accent: #a39bf2;
+  --text-accent-hover: #bebaf8;
+  --text-on-accent: #271a0c;
+  --interactive-accent: #a39bf2;
+  --interactive-accent-hover: #bebaf8;
+  --interactive-normal: #332414;
+  --interactive-hover: #3d2d1b;
+
+  --text-selection: rgba(163, 155, 242, 0.22);
+  --text-highlight-bg: rgba(214, 166, 66, 0.30);
+
+  --code-normal: #d3844e;
+  --code-background: rgba(124, 106, 82, 0.22);
+
+  --color-red: #fd9a92;     --color-red-rgb: 253,154,146;
+  --color-orange: #d3844e;  --color-orange-rgb: 211,132,78;
+  --color-yellow: #d9924f;  --color-yellow-rgb: 217,146,79;
+  --color-green: #9e986b;   --color-green-rgb: 158,152,107;
+  --color-cyan: #719ea7;    --color-cyan-rgb: 113,158,167;
+  --color-blue: #719ea7;    --color-blue-rgb: 113,158,167;
+  --color-purple: #a39bf2;  --color-purple-rgb: 163,155,242;
+  --color-pink: #d77b96;    --color-pink-rgb: 215,123,150;
+}
+
+/* ---------- Chrome: one continuous ground around the card ---------- */
+body.theme-light,
+body.theme-dark {
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+  --ribbon-background: var(--background-secondary);
+  --ribbon-background-collapsed: var(--background-secondary);
+  --tab-container-background: var(--background-secondary);
+  --tab-background-active: var(--background-primary);
+  --tab-outline-color: var(--background-modifier-border);
+  --status-bar-background: var(--background-primary);
+  --status-bar-border-color: transparent;
+  --status-bar-text-color: var(--text-faint);
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-active: var(--text-normal);
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-normal);
+  --icon-color-active: var(--text-accent);
+  --bases-table-header-background: var(--background-primary);
+  --bases-table-group-background: transparent;
+  --bases-embed-border-color: var(--background-modifier-border-hover);
+  --bases-table-border-color: var(--background-modifier-border);
+}
+
+.status-bar {
+  border: none;
+  background: transparent;
+}
+
+/* ---------- Bases: rounded tables ----------
+   Obsidian's embed rule reads --bases-embed-radius (not the documented
+   --bases-embed-border-radius), so define both. The view already scrolls
+   (overflow auto), which clips the rows to the corner. */
+body {
+  --bases-embed-radius: var(--radius-m);
+  --bases-table-column-border-width: 0px;
+}
+.workspace-leaf-content .bases-embed .bases-view[data-view-type="table"],
+.workspace-leaf-content .block-language-base .bases-view[data-view-type="table"] {
+  border-radius: var(--radius-m);
+}
+
+/* Markdown tables get the same corners.
+*/
+.markdown-rendered table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--table-border-color);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+.markdown-rendered table th,
+.markdown-rendered table td {
+  border-width: 0 1px 1px 0;
+}
+.markdown-rendered table tr > :last-child { border-right-width: 0; }
+.markdown-rendered table tbody tr:last-child > * { border-bottom-width: 0; }
+

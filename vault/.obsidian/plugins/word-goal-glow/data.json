@@ -1,0 +1,16 @@
+{
+  "defaultGoal": 0,
+  "frontmatterKey": "word-goal",
+  "rules": [
+    {
+      "folder": "Journal",
+      "goal": 750
+    }
+  ],
+  "duration": 4,
+  "colorLight": "rgba(82, 39, 186, 0.45)",
+  "colorDark": "rgba(163, 155, 242, 0.50)",
+  "showStatusBar": true,
+  "showNotice": true,
+  "hysteresis": 5
+}

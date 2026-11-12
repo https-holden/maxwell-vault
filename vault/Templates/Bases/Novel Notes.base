@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.inFolder("Novel/Notes")
+properties:
+  file.name:
+    displayName: Note
+  file.mtime:
+    displayName: Last edited
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC

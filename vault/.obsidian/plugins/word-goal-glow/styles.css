@@ -1,0 +1,44 @@
+/* Word Goal Glow */
+.wgg-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  --wgg-color: var(--wgg-color-light, rgba(82, 39, 186, 0.45));
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, var(--wgg-color) 100%);
+}
+.theme-dark .wgg-overlay {
+  --wgg-color: var(--wgg-color-dark, rgba(163, 155, 242, 0.50));
+}
+.wgg-overlay.wgg-active {
+  animation: wgg-pulse var(--wgg-duration, 4s) ease-in-out 1;
+}
+@keyframes wgg-pulse {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  35%  { opacity: 0.25; }
+  50%  { opacity: 0.9; }
+  65%  { opacity: 0.25; }
+  80%  { opacity: 0.7; }
+  100% { opacity: 0; }
+}
+.wgg-status.wgg-reached { color: var(--color-green); }
+.wgg-rule { display: flex; gap: 8px; align-items: center; margin: 6px 0; }
+.wgg-rule input[type="text"] { flex: 1; }
+.wgg-rule input[type="number"] { width: 90px; }
+.wgg-zen-count {
+  position: fixed;
+  /* just inside the clear page, where ProZen's vignette (0.75 black at the edge, clear by 20%) ends */
+  right: calc(20% + 8px);
+  bottom: 18px;
+  z-index: 50;
+  pointer-events: none;
+  font-size: var(--font-ui-small);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-faint);
+}
+.wgg-zen-count.wgg-reached { color: var(--color-green); }
+
+/* Assignment pages: this plugin shows the count (response only), so core's whole-page count is hidden. */
+body.wgg-own-count .status-bar-item.plugin-word-count { display: none; }

@@ -1,0 +1,7 @@
+Put anything you want brought into the vault here: chapters (Word, Google Docs export, Pages,
+PDF, plain text), world-building notes, Claude chat exports, old morning pages.
+
+Then ask Claude: "Bring in what's in the Inbox."
+
+Obsidian hides this folder on purpose. Claude files everything and keeps the originals in
+Novel/Sources/.

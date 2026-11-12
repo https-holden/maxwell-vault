@@ -1,0 +1,9 @@
+{
+  "id": "quiet-properties",
+  "name": "Quiet Properties",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Notion-style properties: a short list stays visible, the rest fold behind a \"Show N more\" row. Display only; files are never touched.",
+  "author": "Holden",
+  "isDesktopOnly": false
+}

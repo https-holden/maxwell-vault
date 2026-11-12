@@ -1,0 +1,41 @@
+filters:
+  and:
+    - note.categories.contains(link("Chapters"))
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Chapter
+  note.chapter:
+    displayName: "#"
+  note.status:
+    displayName: Status
+  note.pov:
+    displayName: POV
+  note.summary:
+    displayName: Summary
+  file.mtime:
+    displayName: Last edited
+views:
+  - type: table
+    name: Chapters
+    order:
+      - chapter
+      - file.name
+      - status
+      - pov
+      - summary
+      - file.mtime
+    sort:
+      - property: chapter
+        direction: ASC
+  - type: table
+    name: Linked here
+    filters:
+      and:
+        - file.hasLink(this.file)
+    order:
+      - chapter
+      - file.name
+    sort:
+      - property: chapter
+        direction: ASC

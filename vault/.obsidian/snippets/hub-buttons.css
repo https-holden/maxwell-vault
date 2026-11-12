@@ -1,0 +1,120 @@
+/* Buttons rendered by dataviewjs blocks (class: hub-button), e.g. the ritual buttons on the Daily Hub */
+button.hub-button {
+  font-family: inherit;
+  font-size: var(--font-ui-medium);
+  color: var(--text-normal);
+  background: transparent;
+  border: 1px solid var(--background-modifier-border-hover);
+  border-radius: var(--radius-m);
+  box-shadow: none;
+  padding: 6px 14px;
+  height: auto;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+button.hub-button:hover {
+  background: var(--background-modifier-hover);
+  border-color: var(--text-accent);
+  color: var(--text-accent);
+}
+button.hub-button:active {
+  background: var(--background-modifier-active-hover);
+}
+button.hub-button:focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+}
+/* no empty gap under the button block */
+.block-language-dataviewjs:has(> button.hub-button) {
+  margin-bottom: 0;
+}
+
+/* Contents block (dataviewjs, class: hub-toc) - compact and quiet, like Notion's table of contents */
+.hub-toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.hub-toc ul ul {
+  padding-left: 1.2em;
+}
+.hub-toc li {
+  margin: 0;
+  padding: 1px 0;
+  font-size: var(--font-ui-medium);
+  line-height: 1.5;
+}
+.hub-toc .list-bullet,
+.hub-toc .list-collapse-indicator {
+  display: none;
+}
+.hub-toc a.internal-link {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.hub-toc a.internal-link:hover {
+  color: var(--text-accent);
+  text-decoration: underline;
+}
+
+/* Progress rows (dataviewjs, class: hub-progress): the step and Artist's Way week in progress */
+.hub-progress {
+  margin: 0.4em 0 0.8em;
+}
+.hub-progress-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1em;
+}
+.hub-progress-head a.internal-link {
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+}
+.hub-progress-head a.internal-link:hover {
+  text-decoration: underline;
+}
+.hub-progress-meta,
+.hub-progress-text {
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+.hub-progress-bar {
+  display: flex;
+  height: 8px;
+  margin: 0.45em 0 0.3em;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--background-modifier-border);
+}
+.hub-progress-bar > .is-done {
+  background: var(--interactive-accent);
+}
+.hub-progress-bar > .is-answered {
+  background: color-mix(in srgb, var(--interactive-accent) 40%, transparent);
+}
+
+/* Segmented bars (rituals): one pill per checkbox; rest days lighter; unticked days up to today pale; today's day outlined */
+.hub-progress-bar.is-segmented {
+  gap: 3px;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+}
+.hub-progress-bar.is-segmented > span {
+  flex: 1;
+  border-radius: 999px;
+  background: var(--background-modifier-border);
+}
+.hub-progress-bar.is-segmented > .is-rest {
+  opacity: 0.5;
+}
+.hub-progress-bar.is-segmented > .is-done {
+  background: var(--interactive-accent);
+}
+.hub-progress-bar.is-segmented > .is-expected {
+  background: color-mix(in srgb, var(--interactive-accent) 40%, transparent);
+}
+.hub-progress-bar.is-segmented > .is-today {
+  box-shadow: inset 0 0 0 1.5px var(--interactive-accent);
+}

@@ -1,0 +1,9 @@
+{
+  "id": "link-search",
+  "name": "Link Search",
+  "version": "1.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "The [[ link popup matches whole words instead of scattered letters: every space-separated word you type must appear somewhere in the note name or alias, in any order, ignoring case. Notes picked recently rank higher.",
+  "author": "Holden",
+  "isDesktopOnly": false
+}
